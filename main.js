@@ -7,6 +7,7 @@ const screenTwo = document.querySelector('.screen2');
 const luckyText = document.querySelector('#sorte p');
 let openedCookiesCounter = 0;
 var randomNumber = 0;
+
 /// :: Events Listeners
 openCookie.addEventListener("click", openingCookie);
 resetGame.addEventListener("click", toggleScreen);
