@@ -11,7 +11,7 @@ var randomNumber = 0;
 /// :: Events Listeners
 openCookie.addEventListener("click", openingCookie);
 resetGame.addEventListener("click", toggleScreen);
-document.addEventListener('keydown', handleEnterPress)
+document.addEventListener('keydown', handleEnterPress);
 
 /// :: CallBack Functions
 function openingCookie() {
@@ -35,9 +35,9 @@ function toggleScreen() {
 function handleEnterPress(e) {
     if (e.key == "Enter" && screenTwo.classList.contains('hide')) {
         e.preventDefault();
-        openingCookie()
+        openingCookie();
     } else if (e.key == "Enter" && screenOne.classList.contains('hide')) {
         e.preventDefault();
-        toggleScreen()
+        toggleScreen();
     }
 }
