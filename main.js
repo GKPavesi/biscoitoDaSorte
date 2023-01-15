@@ -6,7 +6,7 @@ const screenOne = document.querySelector('.screen1');
 const screenTwo = document.querySelector('.screen2');
 const luckyText = document.querySelector('#sorte p');
 let openedCookiesCounter = 0;
-
+var randomNumber = 0;
 /// :: Events Listeners
 openCookie.addEventListener("click", openingCookie);
 resetGame.addEventListener("click", toggleScreen);
@@ -16,7 +16,7 @@ document.addEventListener('keydown', handleEnterPress)
 function openingCookie() {
     if (phrasesArray.length > 0) {
         toggleScreen();
-        var randomNumber = Math.floor(Math.random() * (60 - openedCookiesCounter));
+        randomNumber = Math.floor(Math.random() * (60 - openedCookiesCounter));
         luckyText.innerText = phrasesArray[randomNumber];
         phrasesArray.splice(randomNumber, 1);
         openedCookiesCounter++;
